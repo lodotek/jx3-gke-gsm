@@ -20,17 +20,25 @@ jxRequirements:
     enabled: false
     schedule: ""
   cluster:
+    chartRepository: http://jenkins-x-chartmuseum.jx.svc.cluster.local:8080
+    clusterName: tf-jx-thorough-ladybug
     devEnvApprovers:
-    - todo
-    environmentGitOwner: todo
+    - lodotek
+    environmentGitOwner: lodotek
     gitKind: github
     gitName: github
     gitServer: https://github.com
+    gke:
+      projectNumber: "804354894486"
     kanikoFlags: --skip-unused-stages --snapshotMode=redo
+    project: argocd-poc-356920
     provider: gke
     registry: gcr.io
+    zone: us-central1-a
   environments:
   - key: dev
+    owner: lodotek
+    repository: jx3-gke-gsm
   - key: staging
   - key: production
   ingress:
@@ -40,9 +48,18 @@ jxRequirements:
     tls:
       email: ""
       enabled: false
-      production: false
+      production: true
+  pipelineUser:
+    username: jx-bot
   repository: nexus
   secretStorage: gsm
+  storage:
+  - name: logs
+    url: gs://logs-tf-jx-thorough-ladybug-c2a6e98a02f3
+  - name: reports
+    url: gs://reports-tf-jx-thorough-ladybug-c2a6e98a02f3
+  - name: repository
+    url: gs://repository-tf-jx-thorough-ladybug-c2a6e98a02f3
   vault: {}
   webhook: lighthouse
 jxRequirementsIngressExternalDNS:
