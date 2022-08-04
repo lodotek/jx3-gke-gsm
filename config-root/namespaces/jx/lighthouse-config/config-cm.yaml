@@ -41,7 +41,7 @@ data:
         - needs-rebase
         repos:
         - lodotek/jx3-gke-gsm
-      target_url: http://lighthouse-jx./merge/status
+      target_url: http://lighthouse-jx.34.66.36.255.nip.io/merge/status
 kind: ConfigMap
 metadata:
   creationTimestamp: null
