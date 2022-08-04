@@ -13,7 +13,7 @@ releases:
   name: argocd
   values:
   - ../../versionStream/charts/argocd/argocd/values.yaml.gotmpl
-  - values.yaml
+  - jx-values.yaml
 - chart: ../../charts/argo-applications
   name: argo-applications
 templates: {}
