@@ -1,10 +1,17 @@
+filepath: ""
+environments:
+  default:
+    values:
+    - jx-values.yaml
 namespace: argocd
 releases:
 - chart: argo/argo-cd
-  name: argocd
   version: 4.10.5
+  name: argocd
   values:
   - ../../versionStream/charts/argocd/argocd/values.yaml.gotmpl
   - values.yaml
 - chart: ../../charts/argo-applications
   name: argo-applications
+templates: {}
+renderedvalues: {}
