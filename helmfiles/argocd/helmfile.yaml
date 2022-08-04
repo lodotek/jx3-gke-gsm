@@ -3,6 +3,7 @@ releases:
 - chart: argocd/argo-cd
   name: argocd
   values:
-    - values.yaml
+  - ../../versionStream/charts/argocd/argocd/values.yaml.gotmpl
+  - values.yaml
 - chart: ../../charts/argo-applications
   name: argo-applications
