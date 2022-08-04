@@ -6,9 +6,17 @@ environments:
 repositories:
 - name: jxgh
   url: https://jenkins-x-charts.github.io/repo
+- name: dev
+  url: http://chartmuseum-jx.34.66.36.255.nip.io
 releases:
 - chart: jxgh/jx-verify
   name: jx-verify
+  namespace: jx-staging
+  values:
+  - jx-values.yaml
+- chart: dev/php-helloworld
+  version: 0.0.1
+  name: php-helloworld
   namespace: jx-staging
   values:
   - jx-values.yaml
