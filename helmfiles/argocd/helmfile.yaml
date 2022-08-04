@@ -4,6 +4,9 @@ environments:
     values:
     - jx-values.yaml
 namespace: argocd
+repositories:
+- name: argo
+  url: https://argoproj.github.io/argo-helm
 releases:
 - chart: argo/argo-cd
   version: 4.10.5
