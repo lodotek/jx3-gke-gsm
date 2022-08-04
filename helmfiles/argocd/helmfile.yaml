@@ -1,0 +1,6 @@
+namespace: argocd
+releases:
+- chart: argocd/argo-cd
+  name: argocd
+- chart: ../../charts/argo-applications
+  name: argo-applications
