@@ -8,6 +8,7 @@ data:
     in_repo_config:
       enabled:
         lodotek/jx3-gke-gsm: true
+        lodotek/php-helloworld: true
     plank: {}
     pod_namespace: jx
     prowjob_namespace: jx
@@ -20,6 +21,7 @@ data:
         skip-unknown-contexts: false
       merge_method:
         lodotek/jx3-gke-gsm: merge
+        lodotek/php-helloworld: merge
       queries:
       - labels:
         - approved
@@ -31,6 +33,7 @@ data:
         - needs-rebase
         repos:
         - lodotek/jx3-gke-gsm
+        - lodotek/php-helloworld
       - labels:
         - updatebot
         missingLabels:
@@ -41,6 +44,7 @@ data:
         - needs-rebase
         repos:
         - lodotek/jx3-gke-gsm
+        - lodotek/php-helloworld
       target_url: http://lighthouse-jx.34.66.36.255.nip.io/merge/status
 kind: ConfigMap
 metadata:
