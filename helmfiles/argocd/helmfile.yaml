@@ -2,5 +2,7 @@ namespace: argocd
 releases:
 - chart: argocd/argo-cd
   name: argocd
+  values:
+    - values.yaml
 - chart: ../../charts/argo-applications
   name: argo-applications
