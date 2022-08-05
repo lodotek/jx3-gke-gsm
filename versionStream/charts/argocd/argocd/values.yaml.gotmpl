@@ -17,5 +17,3 @@ server:
       nginx.ingress.kubernetes.io/ssl-passthrough: "true"
     hosts:
     - "argo{{ .Values.jxRequirements.ingress.namespaceSubDomain | default "." }}{{ .Values.jxRequirements.ingress.domain | default "cluster.local" }}"
-    tls:
-      enabled: {{ .Values.jxRequirements.ingress.tls.enabled }}
