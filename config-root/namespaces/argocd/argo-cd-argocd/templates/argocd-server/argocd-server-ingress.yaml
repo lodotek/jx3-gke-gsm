@@ -17,6 +17,7 @@ metadata:
     gitops.jenkins-x.io/pipeline: 'namespaces'
   namespace: argocd
 spec:
+  ingressClassName: nginx
   rules:
     - host: argo-argocd.34.66.36.255.nip.io
       http:
