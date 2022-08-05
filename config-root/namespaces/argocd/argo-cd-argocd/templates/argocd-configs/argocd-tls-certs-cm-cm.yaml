@@ -1,0 +1,16 @@
+# Source: argo-cd/templates/argocd-configs/argocd-tls-certs-cm.yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  labels:
+    helm.sh/chart: argo-cd-4.10.5
+    app.kubernetes.io/name: argocd-tls-certs-cm
+    app.kubernetes.io/instance: argocd
+    app.kubernetes.io/component: server
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/part-of: argocd
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: argocd-tls-certs-cm
+  annotations:
+    meta.helm.sh/release-name: 'argocd'
+  namespace: argocd

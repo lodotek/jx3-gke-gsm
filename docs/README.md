@@ -135,6 +135,23 @@
 	      <td></td>
 	      <td><a href='https://github.com/cdfoundation/tekton-helm-chart'>source</a></td>
 	    </tr>
+    <tr>
+		      <td colspan='5'><h3>argocd</h3></td>
+		    </tr>
+	    <tr>
+	      <td>argocd</td>
+	      <td><a href='https://github.com/argoproj/argo-helm' title='A Helm chart for Argo CD, a declarative, GitOps continuous delivery tool for Kubernetes.'> <img src='https://argo-cd.readthedocs.io/en/stable/assets/logo.png' width='24px' height='24px'> argo-cd </a></td>
+	      <td>4.10.5</td>
+	      <td></td>
+	      <td><a href='https://github.com/argoproj/argo-helm'>source</a></td>
+	    </tr>
+    <tr>
+	      <td>argo-applications</td>
+	      <td><a href='' title=''> <img src='' width='24px' height='24px'> ../charts/argo-applications </a></td>
+	      <td></td>
+	      <td></td>
+	      <td></td>
+	    </tr>
 
   </tbody>
 </table>

@@ -279,3 +279,43 @@
     repositoryUrl: https://cdfoundation.github.io/tekton-helm-chart
     resourcePath: config-root/namespaces/tekton-pipelines/tekton-pipeline
     version: 0.29.0
+- namespace: argocd
+  path: helmfiles/argocd/helmfile.yaml
+  releases:
+  - annotations:
+      artifacthub.io/changes: |
+        - [Added]: Add entry and notes for admin.enabled
+        - [Added]: Add comments for server.config.dex.config
+    apiVersion: v2
+    appVersion: v2.4.8
+    dependencies:
+    - condition: redis-ha.enabled
+      name: redis-ha
+      repository: https://dandydeveloper.github.io/charts/
+      version: 4.17.1
+    description: A Helm chart for Argo CD, a declarative, GitOps continuous delivery
+      tool for Kubernetes.
+    firstDeployed: "2022-08-05T00:06:24Z"
+    home: https://github.com/argoproj/argo-helm
+    icon: https://argo-cd.readthedocs.io/en/stable/assets/logo.png
+    keywords:
+    - argoproj
+    - argocd
+    - gitops
+    lastDeployed: "2022-08-05T00:06:24Z"
+    logsUrl: https://console.cloud.google.com/logs/viewer?authuser=1&project=argocd-poc-356920&minLogLevel=0&expandAll=false&customFacets=&limitCustomFacetWidth=true&interval=PT1H&resource=k8s_container%2Fcluster_name%2Ftf-jx-thorough-ladybug%2Fnamespace_name%2Fargocd%2Fcontainer_name%2Fargo-cd&dateRangeUnbound=both
+    maintainers:
+    - name: alexec
+    - name: alexmt
+    - name: jessesuen
+    - name: seanson
+    name: argo-cd
+    releaseName: argocd
+    repositoryName: argo
+    repositoryUrl: https://argoproj.github.io/argo-helm
+    resourcePath: config-root/namespaces/argocd/argo-cd-argocd
+    version: 4.10.5
+  - logsUrl: https://console.cloud.google.com/logs/viewer?authuser=1&project=argocd-poc-356920&minLogLevel=0&expandAll=false&customFacets=&limitCustomFacetWidth=true&interval=PT1H&resource=k8s_container%2Fcluster_name%2Ftf-jx-thorough-ladybug%2Fnamespace_name%2Fargocd%2Fcontainer_name%2F../charts/argo-applications&dateRangeUnbound=both
+    name: ../charts/argo-applications
+    releaseName: argo-applications
+    repositoryName: ..

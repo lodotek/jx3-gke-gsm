@@ -1,0 +1,30 @@
+# Source: argo-applications/templates/applications.yaml
+# Source: argo-applications/templates/applications.yaml
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: dev
+  namespace: argocd
+  annotations:
+    meta.helm.sh/release-name: 'argo-applications'
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+spec:
+  destination:
+    name: ''
+    namespace: argocd
+    server: 'https://kubernetes.default.svc'
+  source:
+    path: .
+    repoURL: 'https://github.com/lodotek/argocd-apps'
+    targetRevision: HEAD
+    directory:
+      recurse: true
+  project: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - Replace=true
+      - CreateNamespace=true

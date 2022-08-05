@@ -16,5 +16,7 @@ releases:
   - jx-values.yaml
 - chart: ../../charts/argo-applications
   name: argo-applications
+  values:
+  - jx-values.yaml
 templates: {}
 renderedvalues: {}
