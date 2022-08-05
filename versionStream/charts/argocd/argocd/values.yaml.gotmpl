@@ -19,11 +19,3 @@ server:
     - "argo{{ .Values.jxRequirements.ingress.namespaceSubDomain | default "." }}{{ .Values.jxRequirements.ingress.domain | default "cluster.local" }}"
     tls:
       enabled: {{ .Values.jxRequirements.ingress.tls.enabled }}
-      secrets:
-  {{- if and (.Values.jxRequirements.ingress.tls.enabled) (hasKey .Values.jxRequirements.ingress "tls") (hasKey .Values.jxRequirements.ingress.tls "secretName") }}
-        "{{ .Values.jxRequirements.ingress.tls.secretName }}": {}
-  {{- else if .Values.jxRequirements.ingress.tls.production }}
-        "tls-{{ .Values.jxRequirements.ingress.domain | replace "." "-" }}-p": {}
-  {{- else }}
-        "tls-{{ .Values.jxRequirements.ingress.domain | replace "." "-" }}-s": {}
-  {{- end }}
